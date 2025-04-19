@@ -1,0 +1,180 @@
+# ignore everything in the root except the "wp-content" directory.
+/*
+!wp-content/
+!app/
+!docs/
+index.php
+/.vscode/
+
+# ignore all mu-plugins, plugins, and themes
+# unless explicitly whitelisted at the end of this file
+
+wp-content/plugins/*
+wp-content/themes/*
+wp-content/uploads/*
+wp-content/themes/veridx/screenshot.png
+
+
+
+# ignore vendor directory & Specific Documentation files
+/vendor/
+/md-docs/
+
+
+app/cert/
+
+
+
+/app/node_modules/
+
+
+# ignore everything in the "wp-content" directory, except:
+# mu-plugins, plugins, and themes directories
+
+!wp-content/plugins/veridx-core/
+!wp-content/themes/veridx/
+
+
+# ignore all files starting with . or ~
+.*
+~*
+
+# track cursor rules directory
+!.cursor/
+.cursor/*
+!.cursor/rules/
+
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+/.svelte-kit/  # SvelteKit build cache
+/test-results/  # Playwright test results
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+.idea/
+asapdigest.code-workspace
+
+# ignore system files
+.DS_Store
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Ignore environment files
+.env
+app/.env.example
+app/.env
+app/.env.local
+app/.env.production
+wp-config.php
+wp-config-local.php
+
+# -------------------------
+# BEGIN Whitelisted Files
+# -------------------------
+
+# track cursor rules
+!.cursor/rules
+
+# track these files, if they exist
+!.gitignore
+!.cursorignore
+!.editorconfig
+!.phpcs.xml.dist
+!.env.example
+!app/.env.example
+!README.md
+!CHANGELOG.md
+!composer.json
+!wp-config-sample.php
+
+# track favicon files, if they exist
+!android-chrome-*.png
+!apple-touch-icon*.png
+!browserconfig.xml
+!favicon*.png
+!favicon*.ico
+!manifest.json
+!mstile-*.png
+!safari-pinned-tab.svg
+!site.webmanifest
+
+# track theme files
+!wp-content/themes/asapdigest/
+
+# ignore in theme
+wp-content/themes/asapdigest/screenshot.png
+
+# ignore node dependency directories
+/app/node_modules/
+
+# Local development artifacts
+*.local.sql
+*.local.zip
+/scripts/local-test.log
+
+# Add new patterns
+## Lockfiles
+!pnpm-lock.yaml
+
+## Build artifacts
+/app/.svelte-kit
+/app/build
+
+## Generated docs
+/docs-generated/
+
+## Security
+.env.local
+wp-config-local.php
+
+## Development
+*.tmp
+*.swp
+
+# Additional patterns for long-term vision
+/.cache-loader
+/.svelte-kit
+/build
+
+# Redis cache files
+*.rdb
+dump.rdb
+
+# JSDoc generated files
+/jsdoc/
+
+# Hybrid billing logs and metrics
+/metrics/
+/usage-logs/
+
+# Generated service worker
+/app/static/service-worker.js
+/app/static/workbox-*.js
+
+# Development database dumps
+*.sqlite
+*.sql.gz
